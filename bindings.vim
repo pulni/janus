@@ -31,21 +31,35 @@ nmap <leader>n :cn<CR>
 "set completeopt=menuone,preview,longest
 set completeopt=menuone,preview
 
+" Smart way to move btw. windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
-"
-" Switch between windows, maximizing the current window
-"
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_ 
+" ,b to display current buffers list
+map <leader>o :BufExplorer<cr>
+map <leader>u :TMiniBufExplorer<cr>
 
-" Tag Window 
-nnoremap <silent> <F8> :TlistToggle<CR>
+" Tab configuration
+map <leader>tn :tabnew<cr>
+map <leader>te :tabedit
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
 
 "Copy and Paste
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+
+nmap <C-s> :w<CR>
+
+"Key mapping for textmate-like indentation
+nmap <A-[> <<
+nmap <A-]> >>
+vmap <A-[> <gv
+vmap <A-]> >gv
 
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
@@ -66,5 +80,5 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
-" It's useful to show the buffer number in the status line.
-set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+
+

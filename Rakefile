@@ -94,7 +94,7 @@ def vim_plugin_task(name, repo=nil)
             subdirs.each do |subdir|
               if File.exists?(subdir)
                 sh "cp -RfL #{subdir}/* #{cwd}/#{subdir}/"
-              end
+              end 
             end
           end
         end
@@ -135,7 +135,8 @@ vim_plugin_task "javascript",       "http://github.com/pangloss/vim-javascript.g
 vim_plugin_task "jslint",           "http://github.com/hallettj/jslint.vim.git"
 vim_plugin_task "nerdtree",         "http://github.com/wycats/nerdtree.git"
 vim_plugin_task "nerdcommenter",    "http://github.com/ddollar/nerdcommenter.git"
-vim_plugin_task "surround",         "http://github.com/tpope/vim-surround.git"
+vim_plugin_task "nerdtreeproject",  "https://github.com/vim-scripts/NERD_tree-Project.git"
+vim_plugin_task "surround",         "http://github.com/tpope/vim-surround.surroundgit"
 vim_plugin_task "taglist",          "http://github.com/vim-scripts/taglist.vim.git"
 vim_plugin_task "vividchalk",       "http://github.com/tpope/vim-vividchalk.git"
 vim_plugin_task "solarized",        "http://github.com/altercation/vim-colors-solarized.git"
@@ -159,10 +160,17 @@ vim_plugin_task "scala",            "http://github.com/bdd/vim-scala.git"
 vim_plugin_task "gist-vim",         "http://github.com/mattn/gist-vim.git"
 vim_plugin_task "cucumber",         "http://github.com/tpope/vim-cucumber.git"
 vim_plugin_task "bufexplorer",         "http://github.com/markabe/bufexplorer.git"
+vim_plugin_task "minibufexpl",      "https://github.com/fholgado/minibufexpl.vim.git"
+vim_plugin_task "easygrep",         "https://github.com/vim-scripts/EasyGrep.git"
+vim_plugin_task "parubyri",         "https://github.com/vim-scripts/PA_ruby_ri.git"
+vim_plugin_task "apidock",          "https://github.com/mileszs/apidock.vim.git"
+vim_plugin_task "rvm",              "https://github.com/csexton/rvm.vim.git"
+vim_plugin_task "unimpaired",       "https://github.com/tpope/vim-unimpaired.git"
 
-#vim_plugin_task "hammer",           "http://github.com/robgleeson/hammer.vim.git" do
-#  sh "gem install github-markup redcarpet"
-#end
+
+# vim_plugin_task "hammer",           "http://github.com/robgleeson/hammer.vim.git" do
+  # sh "gem install github-markup redcarpet"
+# end
 
 vim_plugin_task "command_t",        "http://s3.wincent.com/command-t/releases/command-t-1.2.1.vba" do
   Dir.chdir "ruby/command-t" do
