@@ -124,7 +124,7 @@ def skip_vim_plugin(name)
   Rake::Task[:default].prerequisites.delete(name)
 end
 
-vim_plugin_task "ack.vim",          "http://github.com/mileszs/ack.vim.git"
+vim_plugin_task "ack.vim",          "https://github.com/mileszs/ack.vim.git"
 vim_plugin_task "color-sampler",    "http://github.com/vim-scripts/Color-Sampler-Pack.git"
 vim_plugin_task "conque",           "http://conque.googlecode.com/files/conque_1.1.tar.gz"
 vim_plugin_task "fugitive",         "http://github.com/tpope/vim-fugitive.git"
@@ -156,16 +156,15 @@ vim_plugin_task "irblack",          "http://github.com/wgibbs/vim-irblack.git"
 vim_plugin_task "vim-coffee-script","http://github.com/kchmck/vim-coffee-script.git"
 vim_plugin_task "syntastic",        "http://github.com/scrooloose/syntastic.git"
 vim_plugin_task "puppet",           "http://github.com/ajf/puppet-vim.git"
-vim_plugin_task "scala",            "http://github.com/bdd/vim-scala.git"
+vim_plugin_task "Tabularize",       "https://github.com/godlygeek/tabular.git"
 vim_plugin_task "gist-vim",         "http://github.com/mattn/gist-vim.git"
 vim_plugin_task "cucumber",         "http://github.com/tpope/vim-cucumber.git"
-vim_plugin_task "bufexplorer",         "http://github.com/markabe/bufexplorer.git"
+vim_plugin_task "bufexplorer",      "http://github.com/markabe/bufexplorer.git"
 vim_plugin_task "minibufexpl",      "https://github.com/fholgado/minibufexpl.vim.git"
 vim_plugin_task "easygrep",         "https://github.com/vim-scripts/EasyGrep.git"
 vim_plugin_task "parubyri",         "https://github.com/vim-scripts/PA_ruby_ri.git"
 vim_plugin_task "apidock",          "https://github.com/mileszs/apidock.vim.git"
 vim_plugin_task "rvm",              "https://github.com/csexton/rvm.vim.git"
-vim_plugin_task "unimpaired",       "https://github.com/tpope/vim-unimpaired.git"
 
 
 # vim_plugin_task "hammer",           "http://github.com/robgleeson/hammer.vim.git" do

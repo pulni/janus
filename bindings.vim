@@ -54,6 +54,7 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
 nmap <C-s> :w<CR>
+imap <C-s> <ESC> :w<CR>
 
 "Key mapping for textmate-like indentation
 nmap <A-[> <<
